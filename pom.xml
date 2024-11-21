@@ -9,7 +9,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <exec.mainClass>principal.Principal</exec.mainClass>
-    </properties>
+    </properties>    
     
     <dependencies>
         <dependency>
@@ -17,6 +17,24 @@
             <artifactId>mysql-connector-j</artifactId>
             <version>8.3.0</version>
         </dependency>
-    </dependencies>
-    <name>exercicio_cadastroproduto_desktop_bd_dao_netbeans</name>
+    </dependencies>    
+    <name>exercicio_cadastroproduto_desktop_bd_dao_netbeans</name>    
+    <build>
+        <!-- Plugins do Maven -->
+        <plugins>
+             <!-- Configura o programa principal do projeto -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>Principal</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>           
+        </plugins>        
+    </build>
 </project>
